@@ -1,2 +1,7 @@
-# Capstone
-Depression study through EEG data
+# Diagnosing depression through EEG signals
+
+
+Depression asdwnefkl
+kjjs dvvkj wkev
+ijj jkfv ekr
+isddviojner
