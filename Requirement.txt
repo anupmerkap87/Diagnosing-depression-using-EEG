@@ -1,1 +1,19 @@
+Requirements
 
+
+The code is set up in python environment (requires Python 3.7 or higher). Other standard packages involved to run the packages includes:
+
+Pandas, Numpy, Scipy (for array processing)
+Matplotlib, Seaborn (for visualization)
+Sklearn (for model development)
+MNE Library
+As described in the introduction dataset, we will need to translate the algorithms/ feature extraction steps implemented in MATLAB to Python. Fortunately, MNE Library implements most of the common feature engineering steps.
+
+To install the MNE library in standard Python Environment:
+
+!pip install mne
+
+Antropy Library
+For the non linear features we are using a library called Antropy [https://pythonrepo.com/repo/raphaelvallat-antropy]. To install Antropy
+
+!pip install antropy
