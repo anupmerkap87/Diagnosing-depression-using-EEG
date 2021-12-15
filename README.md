@@ -52,3 +52,21 @@ To install Antropy
 
 !pip install antropy
 
+## Load EEG data into Python Environment
+
+The EEG data was made available to us in 2 formats. The resting stage EEG signals were packed in .mat format and the activity stage EEG signal was available in .raw format.
+The experiment set-up that we have is done in two forms -
+1. Resting - The files are present in .mat format
+2. Simulated activity - The files are present in .raw format
+
+The system that was used to generate these signal is 128 Channel HydroCelGSN.
+
+### Loading of .mat format
+
+![image](https://user-images.githubusercontent.com/86871884/146223588-40e2ba96-1ea8-48bf-8b65-396f0dff424d.png)
+
+### Loading of .raw format
+
+
+
+
