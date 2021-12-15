@@ -4,12 +4,38 @@ Mental disorder incidence is increasing rapidly over the past 2 decades with glo
 
 EEG data is typically processed in MATLAB environment and not essentially in Python. The resource available in Python environment are rather limited. Through this project, we plan to bring out resources and libraries available to process EEG data in Python. The main objective for this Capstone project are -
 
-a) Traditional research on the EEG waveforms were done through MATLAB. We will first have to implement all the functions of MATLAB through native Python librarires like MNE, SCIPY, STATSMODEL
-b) Build detailed feature engineering for Resting and simulated information (we refer to this as ERP). Here we will try extracting Linear Features (directly extracted from the waveform with minimal manipulation), Non-Linear Features (entropy / energy related variables)
-c) Building Classification model that can further differentiate between patients and normal population
+1. Traditional research on the EEG waveforms were done through MATLAB. We will first have to implement all the functions of MATLAB through native Python librarires like MNE, SCIPY, STATSMODEL
+2. Build detailed feature engineering for Resting and simulated information (we refer to this as ERP). Here we will try extracting Linear Features (directly extracted from the waveform with minimal manipulation), Non-Linear Features (entropy / energy related variables)
+3. Building Classification model that can further differentiate between patients and normal population
 
 # Requirements
 
-As described in the introduction dataset, we will need to translate the algorithms/ feature extraction steps implemented in MATLAB to Python. Fortunately, [MNE Library](https://mne.tools/stable/index.html) implements most of the common feature engineering steps. Along with MNE, we utilized packages in Statsmodel.
+As described in the introduction dataset, we will need to translate the algorithms/ feature extraction steps implemented in MATLAB to Python. Fortunately, [MNE Library](https://mne.tools/stable/index.html) implements most of the common feature engineering steps. 
 
-Few details on MNE: MNE is considered to Pandas for health care / wearables data. It has interesting functions to extract multi modal features - We invested 2 weeks of our Capstone time on the MNE Tutorials to learn various ways of handling the EEG waveform. While the notebook skims through the best structure of the code that we can bring here, there are series of experimentations that went in the background to attain state that we are in right now
+To install the MNE library in standard Python Environment: 
+
+!pip install mne
+
+Post reading the EEG waveform through MNE portal, there is a need to be extract the features. 
+For linear features we are using numpy to extract the following features:
+
+1. Mean amplitude (peak to peak) of the power signal
+2. Median amplitude (peak to peak) of the power signal
+3. Maximum amplitude (peak to peak) of the power signal
+4. Minimum amplitude (peak to peak) of the power signal
+5. Power at alpha
+6. Power at beta
+7. Power at delta
+8. Power at theta
+
+It is important to import numpy to get these features extracted. 
+
+For the non linear features we are using a library called Antropy [https://pythonrepo.com/repo/raphaelvallat-antropy]. While Antropy has capability of extracting many entropy and complexity factors, we have used the following 3 features:
+
+1. SVD Entropy [https://math.stackexchange.com/questions/542035/what-does-svd-entropy-capture]
+2. Spectral Entropy [https://www.mathworks.com/help/signal/ref/pentropy.html#:~:text=The%20spectral%20entropy%20(SE)%20of,information%20entropy%2C%20in%20information%20theory.]
+3. Permutation Entropy [https://www.aptech.com/blog/permutation-entropy/#:~:text=Permutation%20Entropy%20(PE)%20is%20a,Henry%20and%20Judge%2C%202019).]
+
+To install Antropy
+
+!pip install antropy
