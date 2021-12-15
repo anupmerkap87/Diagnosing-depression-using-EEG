@@ -4,6 +4,8 @@
 
 Mental disorder incidence is increasing rapidly over the past 2 decades with global depression diagnosed patients reaching 322M as of 2015. Major Depressive Disorder (MDD) has become a leading contributor to the global burden of disease. However, it is diagnosed through a series of interviews carried out by Psychiatrists and Psychologists. The process is not only labor-consuming but also time-consuming. With the rising of tools such as data mining and artificial intelligence, using physiological data to explore new possible physiological indicators of mental disorder and creating new applications for mental disorder diagnosis has become a new research hot topic. Electroencephalography (EEG), as a non-invasive physiological data, provides a direct measure of postsynaptic potentials with millisecond temporal resolution. Since mental disorders, such as depression, are complex brain cognitive disfunction, EEG is naturally the common data that are favored by the researchers.
 
+## Objective
+
 EEG data is typically processed in MATLAB environment and not essentially in Python. The resource available in Python environment are rather limited. Through this project, we plan to bring out resources and libraries available to process EEG data in Python. The main objective for this Capstone project are -
 
 1. Traditional research on the EEG waveforms were done through MATLAB. We will first have to implement all the functions of MATLAB through native Python librarires like MNE, SCIPY, STATSMODEL
@@ -12,11 +14,17 @@ EEG data is typically processed in MATLAB environment and not essentially in Pyt
 
 ## Requirements
 
+The code is set up in python environment (requires Python 3.7 or higher).
+
+### MNE Library
+
 As described in the introduction dataset, we will need to translate the algorithms/ feature extraction steps implemented in MATLAB to Python. Fortunately, [MNE Library](https://mne.tools/stable/index.html) implements most of the common feature engineering steps. 
 
 To install the MNE library in standard Python Environment: 
 
 !pip install mne
+
+### Linear Features through Numpy
 
 Post reading the EEG waveform through MNE portal, there is a need to be extract the features. 
 For linear features we are using numpy to extract the following features:
@@ -32,6 +40,8 @@ For linear features we are using numpy to extract the following features:
 
 It is important to import numpy to get these features extracted. 
 
+### Non Linear Features through Antropy
+
 For the non linear features we are using a library called Antropy [https://pythonrepo.com/repo/raphaelvallat-antropy]. While Antropy has capability of extracting many entropy and complexity factors, we have used the following 3 features:
 
 1. SVD Entropy [https://math.stackexchange.com/questions/542035/what-does-svd-entropy-capture]
@@ -41,3 +51,4 @@ For the non linear features we are using a library called Antropy [https://pytho
 To install Antropy
 
 !pip install antropy
+
