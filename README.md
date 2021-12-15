@@ -24,6 +24,45 @@ To install the MNE library in standard Python Environment:
 
 !pip install mne
 
+
+## Load EEG data into Python Environment
+
+The EEG data was made available to us in 2 formats. The resting stage EEG signals were packed in .mat format and the activity stage EEG signal was available in .raw format.
+The experiment set-up that we have is done in two forms -
+1. Resting - The files are present in .mat format
+2. Simulated activity - The files are present in .raw format
+
+The system that was used to generate these signal is 128 Channel HydroCelGSN.
+
+### Loading of .mat format
+
+mat = scipy.io.loadmat(<file_name>)
+
+### Loading of .raw format
+
+raw = mne.io.read_raw_egi(<file_name>)
+
+### Setting montage
+
+We set the montage for the EEG waveform to 'GSN-HydroCel-128'. More montages can be found in this location [https://mne.tools/stable/generated/mne.channels.make_standard_montage.html#mne.channels.make_standard_montage]
+We also dropped the reference electrode 'E129' as it didn't have any significance.
+
+## Signal Filtering and Visualization
+
+We used the hamming window filter for our project. This was particularly done to attenuate any noise. We understand that any signal above 40 Hz would possibly be a noise insitgated by muscle or eye movement. To implement this we used butter band pass filter.
+
+![image](https://user-images.githubusercontent.com/86871884/146227388-d37dead7-949a-431d-97d4-1c3d9522f8d9.png)
+
+### Example Output before filtering
+
+![image](https://user-images.githubusercontent.com/86871884/146227585-7118b45e-61a8-4e31-81ed-aa6fa2282a25.png)
+
+### Example Output after filtering
+
+![image](https://user-images.githubusercontent.com/86871884/146227723-467622f3-f35d-4694-a955-ffd72add14c3.png)
+
+## Feature Extraction
+
 ### Linear Features through Numpy
 
 Post reading the EEG waveform through MNE portal, there is a need to be extract the features. 
@@ -51,22 +90,4 @@ For the non linear features we are using a library called Antropy [https://pytho
 To install Antropy
 
 !pip install antropy
-
-## Load EEG data into Python Environment
-
-The EEG data was made available to us in 2 formats. The resting stage EEG signals were packed in .mat format and the activity stage EEG signal was available in .raw format.
-The experiment set-up that we have is done in two forms -
-1. Resting - The files are present in .mat format
-2. Simulated activity - The files are present in .raw format
-
-The system that was used to generate these signal is 128 Channel HydroCelGSN.
-
-### Loading of .mat format
-
-![image](https://user-images.githubusercontent.com/86871884/146223588-40e2ba96-1ea8-48bf-8b65-396f0dff424d.png)
-
-### Loading of .raw format
-
-
-
 
