@@ -14,7 +14,10 @@ EEG data is typically processed in MATLAB environment and not essentially in Pyt
 
 ## Requirements
 
-The code is set up in python environment (requires Python 3.7 or higher).
+The code is set up in python environment (requires Python 3.7 or higher). Other standard packages involved to run the packages includes:
+1. Pandas, Numpy, Scipy (for array processing)
+2. Matplotlib, Seaborn (for visualization)
+3. Sklearn (for model development)
 
 ### MNE Library
 
@@ -23,6 +26,13 @@ As described in the introduction dataset, we will need to translate the algorith
 To install the MNE library in standard Python Environment: 
 
 !pip install mne
+
+### Antropy Library
+
+For the non linear features we are using a library called Antropy [https://pythonrepo.com/repo/raphaelvallat-antropy].
+To install Antropy
+
+!pip install antropy
 
 
 ## Load EEG data into Python Environment
@@ -81,15 +91,13 @@ It is important to import numpy to get these features extracted.
 
 ### Non Linear Features through Antropy
 
-For the non linear features we are using a library called Antropy [https://pythonrepo.com/repo/raphaelvallat-antropy]. While Antropy has capability of extracting many entropy and complexity factors, we have used the following 3 features:
+While Antropy has capability of extracting many entropy and complexity factors, we have used the following 3 features:
 
 1. SVD Entropy [https://math.stackexchange.com/questions/542035/what-does-svd-entropy-capture]
 2. Spectral Entropy [https://www.mathworks.com/help/signal/ref/pentropy.html#:~:text=The%20spectral%20entropy%20(SE)%20of,information%20entropy%2C%20in%20information%20theory.]
 3. Permutation Entropy [https://www.aptech.com/blog/permutation-entropy/#:~:text=Permutation%20Entropy%20(PE)%20is%20a,Henry%20and%20Judge%2C%202019).]
 
-To install Antropy
 
-!pip install antropy
 
 
 
