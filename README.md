@@ -1,4 +1,5 @@
-# Diagnosing depression through EEG signals
+# Can EEG data aid in clinical diagnosis of Major Depressive Disorder (MDD)?
+## Building predictive machine learning model using python [MNE, Antropy and Scipy]
 
 ## Introduction
 
