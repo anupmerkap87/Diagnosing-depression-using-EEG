@@ -14,6 +14,7 @@ c) File Name: **Resting_Summary_limited.csv**
 
 All features extracted from resting file used for modeling purpose. The features corresponds to 55 patients' data collected from 16 electrodes.
 Naming convention followed for the variables are - <lr/nl>_<feature>_<resting>_<electode number>
+  
 
 d) File Name: **ERP_Summary_limited.csv**
   
