@@ -5,7 +5,7 @@ a) File Name:
 Single patient active state data extracted using - mne.io.read_raw_egi(path,verbose=True)
 The array of data was then converted into a csv file and saved for reference. Detailed extraction and analysis process can be seen in the Colab Notebook
 
-b) File Name: **Sample_resting_file.mat
+b) File Name: **Sample_resting_file.mat**
 
 Single patient resting state data extracted using - scipy.io.loadmat(file)
 Since the file was too big to be loaded into github, we have taken a sample of the file representing 32 seconds of data. The file has been converted back to .mat format to enable query execution.
