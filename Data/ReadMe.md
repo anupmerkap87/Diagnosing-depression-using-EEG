@@ -1,3 +1,5 @@
+Original data used is the MODMA dataset. This can be procured by reaching out to the MODMA team. (http://modma.lzu.edu.cn/data/application/)
+One will need to sign and End User License Agreement (EULA) for getting hold of the data. 
 The files contained in this repository are:
 
 a) File Name:
