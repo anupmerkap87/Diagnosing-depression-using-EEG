@@ -13,10 +13,10 @@ Since the file was too big to be loaded into github, we have taken a sample of t
 c) File Name: **Resting_Summary_limited.csv** 
 
 All features extracted from resting file used for modeling purpose. The features corresponds to 55 patients' data collected from 16 electrodes.
-Naming convention followed for the variables are :"<lr/nl><feature><resting><electode number>"
+Naming convention followed for the variables are :"<lr/nl_feature_resting_electode number>"
   
 
 d) File Name: **ERP_Summary_limited.csv**
   
 All features extracted from resting file used for modeling purpose. The features corresponds to 55 patients' data collected from 16 electrodes.
-Naming convention followed for the variables are : "<lr/nl><feature><happy/sad/fear><electode number>"
+Naming convention followed for the variables are : "<lr/nl_feature_happy/sad/fear_electode number>"
